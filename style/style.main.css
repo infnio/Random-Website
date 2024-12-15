@@ -1,0 +1,750 @@
+body {
+    background: repeating-linear-gradient(45deg, red, yellow 10%, green 20%);
+    color: lime;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+    cursor: url('https://www.w3schools.com/html/monkey.png'), auto;
+}
+
+h1 {
+    font-size: 5em;
+    text-shadow: 5px 5px magenta;
+    transform: rotate(-5deg);
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border: 10px dashed fuchsia;
+    transform: rotate(20deg);
+    box-shadow: 10px 10px 20px purple;
+    animation: spin 3s infinite alternate;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 200px;
+    border: 5px dotted orange;
+    transform: rotate(15deg);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: rotate(0deg) scale(1.2);
+}
+
+.crazy-effect {
+    animation: spin 1s infinite, flash 0.2s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash {
+    0% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+.exploding-text {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 10px red, -2px -2px 10px blue;
+    animation: explode 1s infinite;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.party-mode {
+    background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXc5OGhsdXl2MTZmYzkzNHUwbmVvZjUwZTl3Y3AwM3J1bGoyb2Z4aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26xBzhls2a4Gw9U6Q/giphy.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.smoke-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.weed-emojis {
+    font-size: 3rem;
+    position: fixed;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+button {
+    background: hotpink;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    animation: jiggle 0.2s infinite;
+}
+
+@keyframes jiggle {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+p {
+    font-size: 3em;
+    margin-top: 50px;
+    animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* /////////////// */
+
+#crazy-ganja-section {
+    background: rgba(34, 139, 34, 0.8);
+    color: lime;
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.crazy-header {
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 3px 3px 10px lime, -2px -2px 10px green;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.weed-paragraph {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: lightgreen;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.ganja-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.ganja-images img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid gold;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    animation: spin 3s infinite alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.weed-marquee {
+    font-size: 2rem;
+    color: yellow;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+button {
+    background-color: hotpink;
+    color: white;
+    padding: 20px;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    animation: jiggle 0.5s infinite;
+}
+
+@keyframes jiggle {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+button:hover {
+    background-color: lime;
+}
+
+
+/* /////////////////// */
+
+
+#ganja-galaxy-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: rgba(34, 139, 34, 0.8);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.ganja-galaxy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.ganja-galaxy-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transform: rotate(15deg);
+    transition: transform 1s ease;
+}
+
+.ganja-galaxy-text {
+    max-width: 500px;
+    padding-left: 20px;
+}
+
+.ganja-galaxy-text h2 {
+    font-size: 2.5rem;
+    color: #e6ff00;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+}
+
+.ganja-galaxy-text p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #b2d937;
+}
+
+/* Shake Effect */
+.shake {
+    animation: shakeScreen 0.5s ease-out;
+}
+
+@keyframes shakeScreen {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Bounce effect for the button */
+@keyframes bounceEffect {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Add floating ganja symbols */
+.floating-ganja-symbols .weed-symbol {
+    position: absolute;
+    font-size: 3rem;
+    animation: floatSymbol 5s infinite ease-in-out;
+}
+
+@keyframes floatSymbol {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes crazyTextEffect {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1.1) rotate(15deg);
+    }
+}
+
+
+/* Drunk shake effect on body */
+.drunk-shake {
+    animation: drunkShake 0.5s infinite ease-in-out;
+}
+
+@keyframes drunkShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Distort all elements on the page with a drunk effect */
+@keyframes drunkDistort {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    50% {
+        transform: scale(0.8) rotate(-10deg);
+    }
+
+    75% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Wobble effect for images */
+@keyframes drunkWobble {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Floating ganja symbols */
+.floating-ganja-symbols {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.floating-ganja-symbols .weed-symbol {
+    position: absolute;
+    font-size: 2rem;
+    animation: floatSymbol 5s infinite ease-in-out;
+}
+
+@keyframes floatSymbol {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+
+@keyframes shakePage {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Style for crazy shake effect */
+body.shake {
+    animation: shakePage 1s infinite;
+}
+
+/* For the ganja galaxy text shake effect */
+.ganja-galaxy-text.shake {
+    animation: shakeText 1s infinite;
+}
+
+@keyframes shakeText {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.drunk-shake {
+    animation: drunkShake 0.5s infinite ease-in-out;
+}
+
+@keyframes drunkShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* For small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+
+    button {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-gallery img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .exploding-text {
+        font-size: 1.5rem;
+    }
+
+    #ganja-galaxy-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ganja-galaxy-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ganja-galaxy-image img {
+        max-width: 100%;
+        width: 80%;
+    }
+
+    .ganja-galaxy-text h2 {
+        font-size: 2rem;
+    }
+
+    .ganja-galaxy-text p {
+        font-size: 1rem;
+    }
+
+    #crazy-ganja-section {
+        padding: 20px;
+    }
+
+    .crazy-header {
+        font-size: 2rem;
+    }
+
+    .ganja-images img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .weed-paragraph {
+        font-size: 1.5rem;
+    }
+}
+
+/* For medium screens (tablets and larger phones) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    button {
+        font-size: 1.8em;
+        padding: 18px;
+    }
+
+    .image-gallery {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .image-gallery img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .exploding-text {
+        font-size: 2rem;
+    }
+
+    #ganja-galaxy-section {
+        padding: 40px;
+    }
+
+    .ganja-galaxy-container {
+        flex-direction: row;
+    }
+
+    .ganja-galaxy-image img {
+        max-width: 100%;
+        width: 50%;
+    }
+
+    .ganja-galaxy-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .ganja-galaxy-text p {
+        font-size: 1.2rem;
+    }
+
+    .ganja-images img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .weed-paragraph {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    button {
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    .image-gallery {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .image-gallery img {
+        width: 300px;
+        height: 300px;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .exploding-text {
+        font-size: 3rem;
+    }
+
+    #ganja-galaxy-section {
+        padding: 50px;
+    }
+
+    .ganja-galaxy-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ganja-galaxy-image img {
+        max-width: 400px;
+    }
+
+    .ganja-galaxy-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .ganja-galaxy-text p {
+        font-size: 1.4rem;
+    }
+
+    .ganja-images img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .weed-paragraph {
+        font-size: 2rem;
+    }
+}
