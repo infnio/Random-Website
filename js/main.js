@@ -1,3 +1,43 @@
+const minnum = 1;
+const maxnum = 100;
+let answer = Math.floor(Math.random() * (maxnum - minnum) + 1) + minnum;
+let running = true;
+let attempts = 0;
+let guess;
+
+document.body.style.filter = "blur(5px)"; // Apply blur effect while running is true
+
+while (running) {
+    guess = window.prompt(`Guess a number between ${minnum} and ${maxnum}`);
+    guess = Number(guess);
+
+    if (guess < minnum || guess > maxnum) {
+        window.alert("Enter Valid Number");
+    } else if (isNaN(guess)) {
+        window.alert("Enter Valid Number");
+    } else {
+        attempts++;
+        if (guess < answer) {
+            window.alert("Too low! Try again");
+        } else if (guess > answer) {
+            window.alert("Too High! Try again");
+        } else {
+            window.alert(`Congrats you guessed it right! The number was ${answer} and it took you ${attempts} attempts.`);
+            running = false;
+            document.body.style.filter = "none"; // Remove blur effect
+            startAudio();
+        }
+    }
+}
+
+function startAudio() {
+    const audio = document.getElementById('crazyAudio');
+    audio.muted = false; // Unmute audio
+    audio.play().catch(error => {
+        console.error('Error playing audio:', error);
+    });
+}
+
 window.onload = function () {
     const audio = document.getElementById('crazyAudio');
 

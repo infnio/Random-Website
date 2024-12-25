@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC-Only Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #message {
+      display: none;
+      font-size: 24px;
+      color: #ff0000;
+    }
+
+    #content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="message">This website only works on PC.</div>
+  <div id="content">
+    <h1>Welcome to the Website</h1>
+    <p>This content is visible only on PC.</p>
+  </div>
+
+  <script>
+    function isMobileDevice() {
+      return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop|BlackBerry/i.test(navigator.userAgent);
+    }
+
+    if (isMobileDevice()) {
+      document.getElementById("message").style.display = "block";
+      document.getElementById("content").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
